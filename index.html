@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品经理 - Edith 简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Microsoft YaHei', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sidebar {
+            background: #ffffff;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .project-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .project-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+        }
+
+        .content-hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .content-visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-tag {
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -9px;
+            top: 4px;
+            width: 18px;
+            height: 18px;
+            background: #3b82f6;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+    </style>
+</head>
+<body class="flex flex-col md:flex-row min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="sidebar w-full md:w-80 p-8 flex-shrink-0">
+        <div class="sticky top-8">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-slate-900 mb-2"> 钟荟敏 / Edith </h1>
+                <p class="text-blue-600 font-semibold mb-4">产品经理</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="skill-tag">平台产品</span>
+                    <span class="skill-tag">电商系统</span>
+                    <span class="skill-tag">PMP认证</span>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-8 text-sm text-slate-600">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-briefcase w-5 text-blue-500"></i>
+                    <span>6年互联网产品经验</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt w-5 text-blue-500"></i>
+                    <span>随时到岗</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-phone w-5 text-blue-500"></i>
+                    <span>1343-3599-332</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-envelope w-5 text-blue-500"></i>
+                    <span>465122170@qq.com</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">核心工具能力</h3>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span>系统架构 (Axure/Draw.io)</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-1.5 rounded-full">
+                            <div class="bg-blue-600 h-1.5 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span>流程设计 (Xmind/Figma)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-1.5 rounded-full">
+                            <div class="bg-blue-600 h-1.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span>数据分析 (SQL/看板)</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-1.5 rounded-full">
+                            <div class="bg-blue-600 h-1.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <h3 class="text-sm font-bold mb-2 flex items-center gap-2">
+                    <i class="fas fa-certificate text-yellow-500"></i> 专业认证
+                </h3>
+                <p class="text-xs text-slate-600">PMP® 项目管理专业人士认证</p>
+               
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-6 md:p-12 lg:max-w-5xl">
+        <!-- Profile -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i class="fas fa-user-tie text-blue-600"></i> 个人简介
+            </h2>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                9年互联网深耕，历经 <span class="font-semibold text-slate-800">电商设计 → 产品经理 → B端平台产品经理</span> 的职业演进。具备从用户体验感知到复杂系统底层逻辑构建的复合背景。擅长将零散业务需求抽象为标准化的系统架构，在高并发交易、多角色协同、商户经营生态建设方面有深厚实战经验。
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-bold text-sm text-blue-700 mb-2">B端系统架构能力</h4>
+                    <p class="text-xs text-slate-500 leading-normal">主导设计过商户入驻、订单交易、财务结算、权限控制等核心中后台模块，具备强逻辑建模能力。</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <h4 class="font-bold text-sm text-blue-700 mb-2">电商平台化思维</h4>
+                    <p class="text-xs text-slate-500 leading-normal">深刻理解“平台-商户-消费者”三端博弈，项目经历相对丰富。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+                <i class="fas fa-history text-blue-600"></i> 工作经历
+            </h2>
+
+            <div class="relative ml-4 border-l-2 border-slate-200 pb-8">
+                <!-- Company 1 -->
+                <div class="mb-12 relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">超元纬度科技有限公司</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2025.12 – 2026.03</span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-4">高级产品经理 / 商户平台负责人</p>
+                    
+                    <!-- Collapsible Project Card 1 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden cursor-pointer" onclick="toggleProject('p1')">
+                        <div class="p-5 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">电商平台商户生态系统建设</h4>
+                                    <p class="text-xs text-slate-500">构建从入驻到结算的完整商业闭环</p>
+                                </div>
+                            </div>
+                            <i id="p1-icon" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                        </div>
+                        <div id="p1-content" class="content-hidden px-5 pb-6 border-t border-slate-50 pt-4">
+                            <div class="space-y-6">
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-700 mb-2"><i class="fas fa-sitemap mr-2"></i>系统架构设计</h5>
+                                    <p class="text-sm text-slate-600">负责商户侧整体信息架构，涵盖：商户入驻(KYB)、CRM管理、商品中心、订单中心、账务中心（分佣/提现）。</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-slate-50 p-3 rounded-lg">
+                                        <p class="font-bold text-xs text-slate-800 mb-1">商户入驻标准化</p>
+                                        <ul class="text-xs text-slate-600 list-disc ml-4 space-y-1">
+                                            <li>设计多级审核工作流</li>
+                                            <li>资质风控校验机制</li>
+                                            <li>商户权限自动化初始化</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-lg">
+                                        <p class="font-bold text-xs text-slate-800 mb-1">订单状态机设计</p>
+                                        <ul class="text-xs text-slate-600 list-disc ml-4 space-y-1">
+                                            <li>定义6大核心订单状态</li>
+                                            <li>设计异常售后流转分支</li>
+                    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-700 mb-2"><i class="fas fa-chart-line mr-2"></i>核心成果</h5>
+                                    <p class="text-sm text-slate-600">成功构建了支持数万级商户并发入驻的标准化流程，对接了分账系统供应商，接入到电商平台，提高了整体结算效率。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company 2 -->
+                <div class="mb-12 relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">福建罗派斯集团有限公司</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2024.01 – 2025.11</span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-4">项目经理（PMO）/ 支付平台优化/合规</p>
+                    
+                    <div class="project-card bg-white rounded-xl overflow-hidden cursor-pointer" onclick="toggleProject('p2')">
+                        <div class="p-5 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center text-green-600">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">跨境支付及账户体系优化</h4>
+                                    <p class="text-xs text-slate-500">金融科技合规与支付通道效能提升</p>
+                                </div>
+                            </div>
+                            <i id="p2-icon" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                        </div>
+                        <div id="p2-content" class="content-hidden px-5 pb-6 border-t border-slate-50 pt-4">
+                            <div class="space-y-4 text-sm text-slate-600">
+                                <p><i class="fas fa-check-circle text-green-500 mr-2"></i><b>流程重构：</b> 优化 200+ 企业/个人开户 KYC/KYB 流程，通过智能证件识别减少人工审核环节。</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <!-- Company 3 -->
+                <div class="mb-12 relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">元创兴业（厦门）数字科技有限公司</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2023.04 – 2023.12</span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-4">产品经理</p>
+                    
+                    <div class="project-card bg-white rounded-xl overflow-hidden cursor-pointer" onclick="toggleProject('p3')">
+                        <div class="p-5 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center text-green-600">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">九龙谷森林公园景区 AR app上线</h4>
+                                    <p class="text-xs text-slate-500">协同景区市场部开发电商APP</p>
+                                </div>
+                            </div>
+                            <i id="p3-icon" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                        </div>
+                        <div id="p3-content" class="content-hidden px-5 pb-6 border-t border-slate-50 pt-4">
+                            <div class="space-y-4 text-sm text-slate-600">
+                                <p><i class="fas fa-check-circle text-green-500 mr-2"></i><b>工作成果：</b> 跨部门合作，跟进票务系统开发，以及对接电商平台sku</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Company 4
+  -->
+                <div class="mb-12 relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">厦门看透科技有限公司</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2022.12 – 2023.04</span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-4">产品经理</p>
+                    
+                    <div class="project-card bg-white rounded-xl overflow-hidden cursor-pointer" onclick="toggleProject('p4')">
+                        <div class="p-5 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center text-green-600">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">数字藏品APP/低代码工具类型产品</h4>
+                                    <p class="text-xs text-slate-500">主导AR编辑器交互/协调前端、后端、UI团队推进产品开发/参与市场推广活动设计</p>
+                                </div>
+                            </div>
+                            <i id="p4-icon" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                        </div>
+                        <div id="p4-content" class="content-hidden px-5 pb-6 border-t border-slate-50 pt-4">
+                            <div class="space-y-4 text-sm text-slate-600">
+                                <p><i class="fas fa-check-circle text-green-500 mr-2"></i><b>工作成果：</b>实现数字展馆线上化展示</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Company 5 -->
+                <div class="mb-12 relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">爱恩特（厦门）信息科技有限公司</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2020.04 – 2022.12</span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-4">产品经理 / 海外业务</p>
+                    
+                    <div class="project-card bg-white rounded-xl overflow-hidden cursor-pointer" onclick="toggleProject('p5')">
+                        <div class="p-5 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">海外租赁平台 keypeo APP</h4>
+                                    <p class="text-xs text-slate-500">对标 Airbnb 的海外房产交易系统</p>
+                                </div>
+                            </div>
+                            <i id="p5-icon" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                        </div>
+                        <div id="p5-content" class="content-hidden px-5 pb-6 border-t border-slate-50 pt-4">
+                            <p class="text-sm text-slate-600 mb-4">负责从零到一构建房源管理系统（CMS）、合同签署电子化流程。</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-100 text-slate-700 text-[10px] px-2 py-1 rounded">房源管理</span>
+                                <span class="bg-slate-100 text-slate-700 text-[10px] px-2 py-1 rounded">合同中心</span>
+                                <span class="bg-slate-100 text-slate-700 text-[10px] px-2 py-1 rounded">订单闭环</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Company 6 -->
+                <div class="mb-12 relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-800">电商公司</h3>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">2016-2018（/span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-4">电商设计/平面设计</p>
+                    
+                    <div class="project-card bg-white rounded-xl overflow-hidden cursor-pointer" onclick="toggleProject('p6')">
+                        <div class="p-5 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">电商公司设计</h4>
+                                    <p class="text-xs text-slate-500">主要参与平台 京东 淘宝 阿里巴巴</p>
+                                </div>
+                            </div>
+                            <i id="p6-icon" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                        </div>
+                        <div id="p6-content" class="content-hidden px-5 pb-6 border-t border-slate-50 pt-4">
+                            <p class="text-sm text-slate-600 mb-4">在此间，构建了电商平台的认知，以及在用户体验上色彩和文字有自己的了解。。</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i class="fas fa-graduation-cap text-blue-600"></i> 教育背景
+            </h2>
+            <div class="bg-white p-6 rounded-xl border border-slate-100 flex flex-col md:flex-row md:items-center justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800">惠州经济技术学院</h3>
+                    <p class="text-slate-600">广告设计与制作 · 大专</p>
+                </div>
+                <div class="text-slate-400 font-medium">2013 - 2016</div>
+            </div>
+             <div class="bg-white p-6 rounded-xl border border-slate-100 flex flex-col md:flex-row md:items-center justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800">杭州电子科技大学</h3>
+                    <p class="text-slate-600">工商管理 · 本科</p>
+                </div>
+                <div class="text-slate-400 font-medium">2016 - 2018</div>
+            </div>
+        </section>
+
+       
+    </main>
+
+    <script>
+        function toggleProject(id) {
+            const content = document.getElementById(id + '-content');
+            const icon = document.getElementById(id + '-icon');
+            
+            if (content.classList.contains('content-hidden')) {
+                // Close others if needed (optional)
+                content.classList.remove('content-hidden');
+                content.classList.add('content-visible');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.remove('content-visible');
+                content.classList.add('content-hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Initial open for the first project
+        window.onload = () => {
+            setTimeout(() => toggleProject('p1'), 500);
+        };
+    </script>
+</body>
+</html>
